@@ -86,3 +86,14 @@ while(x <= 20) {
 
     x = x+1
 }
+
+let firstNumber = 0
+let secondNumber = 1
+let firstAndSecond = firstNumber + secondNumber
+
+while(firstAndSecond <1000) {
+    console.log(firstAndSecond);
+    secondNumber = firstNumber;
+    firstNumber = firstAndSecond;
+    firstAndSecond = firstNumber + secondNumber;
+}
