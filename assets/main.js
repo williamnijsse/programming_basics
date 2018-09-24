@@ -97,3 +97,13 @@ while(firstAndSecond <1000) {
     firstNumber = firstAndSecond;
     firstAndSecond = firstNumber + secondNumber;
 }
+
+let Getallen = [2, 4, 8, 9, 12, 13];
+let totalOfAll = 0;
+
+for(z=0; z<Getallen.length; z++) {
+    console.log(Getallen[z]);
+    totalOfAll = totalOfAll + Getallen[z];
+}
+console.log(totalOfAll);
+
