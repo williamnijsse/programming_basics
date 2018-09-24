@@ -70,9 +70,19 @@ switch (cijfer){
 console.log(tekst);
 
 //opdracht 3 snap ik niet, ik weet niet precies wat ik nou moet doen.
-purchasedBook = true;
-job = ‘teacher’;
-inTrain = false;
 
-if(purchasedBook == inTrain ){
+
+// les over loops
+let x = 1
+
+while(x <= 20) {
+    if(x % 4==0){
+        console.log(x, "Deelbaar door 4");
+    }
+    
+    else{
+        console.log(x, "Niet deelbaar door 4");
+    }
+
+    x = x+1
 }
