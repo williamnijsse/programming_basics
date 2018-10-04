@@ -32,3 +32,9 @@ const filteredLapRoundsWithForLoop = function () {
 }
 
 console.log(filteredLapRoundsWithForLoop(lapRounds));
+
+const filterLapRound = lapRounds.filter(function(lapRounds) {
+    return lapRounds < 4;
+});
+
+console.log(filterLapRound);
