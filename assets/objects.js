@@ -28,17 +28,27 @@ const teachers = [
     {
         name: "Loek",
         profession: "Teacher",
-        brand: "Linux"
+        brand: "Linux",
+        hoursPerWeek: "40",
+        salary: 1200,
+        salaryPerHour:  function() {
+            perHour = salary / hoursPerWeek;
+            console.log(perHour);
+        }
     },
     {
         name: "Daan",
         profession: "Teacher",
-        brand: "Arduino"
+        brand: "Arduino",
+        hoursPerWeek: "40",
+        salary: 1200
     },
     {
         name: "Rimmert",
         profession: "Teacher",
-        brand: "Apple"
+        brand: "Apple",
+        hoursPerWeek: "40",
+        salary: 1200
     }
 ]
 
@@ -59,4 +69,6 @@ teachers.forEach(function(teachers){
     console.log("I have a " + teachers.profession + " called " + teachers.name + " and he likes to work on a " + teachers.brand + " computer.")
 });
 
+//Opdracht 3: 2.	[Pittig]. Gegeven is de array met objecten uit de vorige vraag. Voeg twee properties “hoursPerWeek” en “salary” toe. Verzin zelf bijpassende waardes. Voeg nu een methode “salaryPerHour” toe, met daarin een functie die print hoeveel de docenten per uur verdienen.
 
+console.table(teachers);
