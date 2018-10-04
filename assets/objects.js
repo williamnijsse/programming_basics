@@ -32,7 +32,7 @@ const teachers = [
         hoursPerWeek: "40",
         salary: 1200,
         salaryPerHour:  function() {
-            perHour = salary / hoursPerWeek;
+            perHour = this.salary / this.hoursPerWeek;
             console.log(perHour);
         }
     },
@@ -72,3 +72,5 @@ teachers.forEach(function(teachers){
 //Opdracht 3: 2.	[Pittig]. Gegeven is de array met objecten uit de vorige vraag. Voeg twee properties “hoursPerWeek” en “salary” toe. Verzin zelf bijpassende waardes. Voeg nu een methode “salaryPerHour” toe, met daarin een functie die print hoeveel de docenten per uur verdienen.
 
 console.table(teachers);
+
+//ik kom niet uit opdracht 3
