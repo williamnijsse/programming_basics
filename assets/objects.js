@@ -24,49 +24,40 @@ for (let i = 0; i < lapRounds.length; i++) {
 
 //Opdracht 2: Gebruik een for-loop of foreach-loop en print voor elk object de regel: “I have a [profession] named [name] and he likes to work on a [brand] computer”. De vierkante haken zijn placeholders voor de bijbehorende properties uit de objecten hierboven.
 
+const printSalaryPerHour = function() {
+    console.log(`${this.name} earns ${this.printSalaryPerHour} per hour`);
+}
+
 const teachers = [
     {
         name: "Loek",
         profession: "Teacher",
         brand: "Linux",
-        hoursPerWeek: "40",
-        salary: 1200,
-        salaryPerHour:  function() {
-            perHour = this.salary / this.hoursPerWeek;
-            console.log(perHour);
-        }
+        hoursPerWeek: 40,
+        salaryPerHour: 40,
+        printSalaryPerHour: printSalaryPerHour
     },
     {
         name: "Daan",
         profession: "Teacher",
         brand: "Arduino",
-        hoursPerWeek: "40",
-        salary: 1200
     },
     {
         name: "Rimmert",
         profession: "Teacher",
         brand: "Apple",
-        hoursPerWeek: "40",
-        salary: 1200
     }
 ]
 
 //deze geeft een undifined medling, de foreach werkt wel
 for (let i = 0; i < teachers.length; i++) {
-    if(i === 0) {
-        console.log("I have a " + teachers.profession + " called " + teachers.name + " and he likes to work on a " + teachers.brand + " computer.");
-    }
-    else if(i === 1) {
-        console.log("I have a " + teachers.profession + " called " + teachers.name + " and he likes to work on a " + teachers.brand + " computer.");
-    }
-    else {
-        console.log("I have a " + teachers.profession + " called " + teachers.name + " and he likes to work on a " + teachers.brand + " computer.");
-    }
+    const element = teachers[i];
+        console.log(`I have a ${teachers.profession} named ${teachers.name} and he likes to work on a / an ${teachers.brand} computer`);
+
 }
 
-teachers.forEach(function(teachers){
-    console.log("I have a " + teachers.profession + " called " + teachers.name + " and he likes to work on a " + teachers.brand + " computer.")
+teachers.forEach(function(element, index, array){
+    console.log("I have a " + element.profession + " called " + element.name + " and he likes to work on a " + element.brand + " computer.")
 });
 
 //Opdracht 3: 2.	[Pittig]. Gegeven is de array met objecten uit de vorige vraag. Voeg twee properties “hoursPerWeek” en “salary” toe. Verzin zelf bijpassende waardes. Voeg nu een methode “salaryPerHour” toe, met daarin een functie die print hoeveel de docenten per uur verdienen.
