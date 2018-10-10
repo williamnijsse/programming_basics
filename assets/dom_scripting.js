@@ -1,82 +1,23 @@
-// const listItems = document.getElementsByTagName("li");
-// console.log(listItems);
+//Opdracht 1, het gemiddelde berekenen in een gemiddelde regel
+const list = document.getElementsByTagName("tr");  //pak alle tr.
+let gradeArray = []; //maak een lege array aan, waar alle cijfers straks inkomen.
+let gradesArraySum = 0; // maak een variabele met waarde 0, zodat je straks de cijfers bij de variabele de cijfers op kan tellen
 
-// const ul = document.getElementById("groceryList");
-// const firstChild = groceryList.firstElementChild;
-// console.log(firstChild);
+for (let index = 0; index < gradeArray.length; index++) {
+    let listItem = list[index]; // variabele listItem die van alle 'tr's' een array maakt 
+    let getGrade = listItem.lastElementChild.innerText; // variabele die van alle listItem, dus hierboven, van de array dus, het laatste element pakt, en daarvan de inntertext, dus het cijfer (grade).
+    let parsedValue = parseFloat(getGrade); // maakt van het getal, wat als een string gezien wordt, een float.
+    let generateArray = gradeArray.push(parsedValue); //de variabele generateArray je hier maakt, pakt de lege array gradeArray die we aan het begin gemaakt hebben, en zet alle cijfers (parsedValue) erin, dmv .push  .
+    let averageGrade = gradesArraySum += gradeArray[index]; // de variabele averageGrade die we hier aanmaken bestaat uit (gradesArraySum, die 0 is, dat hebben we in het begin gezegd) + (gradeArray[index], dat is de lege array die we hierboven gevuld hebben.)
+};
 
-// firstChild.classList.add("standOut");
+let overallGrade = gradesArraySum/list.length; 
 
-// const ph = document.getElementById("groceryList");
-// const newListItem = document.createElement("li");
-// newListItem.innerText = "krop sla";
-// ph.appendChild(newListItem);
+const table = document.getElementById("table");
+let row = table.insertRow(list.length);
 
-// const groceries = [
-//     {
-//         name: "tandenborstel",
-//         price: 2
-//     },
-//     {
-//         name: "deodorant",
-//         price: 4
-//     },
-//     {
-//         name: "bakmeel",
-//         price: 1
-//     },
-//     {
-//         name: "wortel",
-//         price: 0.5
-//     },
-//     {
-//         name: "krop sla",
-//         price: 1
-//     }
-// ]
+let addFirstCell = row.insertCell(0);
+let addSecondCell = row.insertCell(1);
 
-// console.table(groceries);
-
-// for (let index = 0; index < groceries.length; index++) {
-//     const element = groceries[index];
-//     console.log(element);
-// }
-
-// const table = document.createElement("table");
-// const tr = document.createElement("tr");
-// const tdName = document.createElement("td");
-// const tdPrice = document.createElement("td");
-
-// tr.appendChild(tdName);
-// tr.appendChild(tdPrice);
-// table.appendChild(tr);
-
-// const body = document.getElementById("body");
-// body.appendChild(table);
-
-
-// for (let index = 0; index < groceries.length; index++) {
-//     const element = groceries[index].name;
-//     const tr = document.createElement("tr");
-//     const tdName = document.createElement("td");
-//     const tdPrice = document.createElement("td");
-//     tdName.id = "name";
-//     tdName.innerText = groceries[index].name;
-//     tdPrice.innerText = groceries[index].price;
-//     tr.appendChild(tdName);
-//     tr.appendChild(tdPrice);
-//     table.appendChild(tr);
-// }
-
-// for (let index = 0; index < groceries.length; index++) {
-//     const element = groceries[index].price;
-//     console.log(element);
-// }
-
-// const totalPrice = function() {
-//     let total = 0;
-//     let price = groceries.forEach(function(element, index, array){
-//             total += element.price;
-//     })
-// }
-
+addFirstCell.innerText = "Gemiddede cijfer";
+addSecondCell.innerText = overallGrade;
